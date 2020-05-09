@@ -43,5 +43,7 @@ count_up_from_one_nested_refactored 10;
 
 (* 
 	Use if: 
-   - Private function is not reused, could be misued elsewhere, will be deprecated or changed later 
+   - Private function is not reused
+   - Could be misued elsewhere
+   - Will be deprecated or changed later 
 *)
