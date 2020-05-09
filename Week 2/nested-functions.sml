@@ -5,12 +5,12 @@
 
 (* (3, 6) -> [3, 4, 5, 6] *)
 fun countFromTo(from: int, to: int) =
-	if from = to
-	then to :: []
-	else from :: countFromTo(from + 1, to);
+    if from = to
+    then to :: []
+    else from :: countFromTo(from + 1, to);
 
 fun count_up_from_one(x: int) =
-	countFromTo(1, x);
+    countFromTo(1, x);
 
 count_up_from_one(10);
 
@@ -18,26 +18,26 @@ count_up_from_one(10);
 (* Nested Function Method *)
 
 fun count_up_from_one_nested(x: int) =
-	let
-		fun countFromTo(from: int, to: int) =
-			if from = to
-			then to :: []
-			else from :: countFromTo(from + 1, to);
-	in
-		countFromTo(1, x)
-	end;
+    let
+        fun countFromTo(from: int, to: int) =
+            if from = to
+            then to :: []
+            else from :: countFromTo(from + 1, to);
+    in
+        countFromTo(1, x)
+    end;
 
 count_up_from_one_nested(10);
 
 fun count_up_from_one_nested_refactored(x: int) =
-	let
-		fun count(from: int) =
-			if from = x
-				then x :: []
-			else from :: count(from + 1);
-	in
-		count(1)
-	end;
+    let
+        fun count(from: int) =
+            if from = x
+                then x :: []
+            else from :: count(from + 1);
+    in
+        count(1)
+    end;
 
 count_up_from_one_nested_refactored 10;
 
