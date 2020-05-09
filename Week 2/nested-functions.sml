@@ -5,12 +5,12 @@
 
 (* (3, 6) -> [3, 4, 5, 6] *)
 fun countFromTo(from: int, to: int) =
-		if from = to
-		then to :: []
-		else from :: countFromTo(from + 1, to);
+	if from = to
+	then to :: []
+	else from :: countFromTo(from + 1, to);
 
 fun count_up_from_one(x: int) =
-		countFromTo(1, x);
+	countFromTo(1, x);
 
 count_up_from_one(10);
 
